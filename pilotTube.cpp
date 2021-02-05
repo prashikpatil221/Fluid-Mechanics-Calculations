@@ -9,7 +9,7 @@ int main()
 		freopen("output.txt","w",stdout);
 	#endif
 	float h1,h2,dif;
-	float g=9.81;
+	float g=980.665;
 	cout<<"input H1 in cm : ";
 	cin>>h1;
 	cout<<endl;
@@ -21,7 +21,7 @@ int main()
 	float x= 2*g*dif;
 	float v = pow(x,0.5);
 
-	cout<<"V = "<<v<<endl;
+	cout<<"V = "<<v<<"cm/sec"<<endl;
 	
 	return 0;
 }
