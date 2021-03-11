@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	#ifndef ONLINE_JUDGE
+		freopen("input.txt","r",stdin);
+		freopen("output.txt","w",stdout);
+	#endif
+		int t;
+		cin>>t;
+		while(t--){
+	float d=0.082,ro=1000,vw=0.001;
+	float h,q;
+	cin>>h>>q;
+	float d1=1.27*pow(10,-3),d2=3.77*pow(10,-3);
+	float l=5;
+	float dh=h*0.001;
+	float Q=(q*0.001)/3600;
+	float area1=1.266*pow(10,-4);
+	float area2=1.115*pow(10,-4);
+	float vel=Q/area2;
+	float dp=ro*9.81*dh;
+	float re= (ro*vel*d)/vw;
+	float fm=(2*dh*d1*9.81)/(4*l*vel*vel);
+	float fc=0.046*pow(re,-0.2);
+
+
+	cout<<"ΔH = "<<dh<<endl;
+	cout<<"Flow rate (Q) = "<<Q<<endl;
+	cout<<"V = "<<vel<<endl;
+	cout<<"F-measured = "<<fm<<endl;
+	cout<<"F-calculated = "<<fc<<endl;
+	cout<<"Re = "<<re<<endl;
+		}
+	
+	
+	return 0;
+}
