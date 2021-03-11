@@ -24,7 +24,11 @@ int main()
 	float dp=ro*9.81*dh;
 	float re= (ro*vel*d)/vw;
 	float fm=(2*dh*d1*9.81)/(4*l*vel*vel);
-	float fc=0.046*pow(re,-0.2);
+	float fc;
+	if(re>=4000)
+		fc=0.046*pow(re,-0.2);
+	if(re<=2000)
+		fc=16/re;
 
 
 	cout<<"ΔH = "<<dh<<endl;
