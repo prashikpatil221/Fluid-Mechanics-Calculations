@@ -21,15 +21,17 @@ int main()
 	float vel=Q/area1;
 	float dp=ro*9.81*dh;
 	float re= (ro*vel*d)/vw;
-	float fc=0.046*pow(re,-0.2);
+	float fc;
 	float l=(2*dh*1.5*0.01*9.81)/(4*fc*vel*vel);
 	string type;
-	if(re<=2000)
+	if(re<=2000){
+		fc=16/re;
 		type="Laminar";
-	if(re>=4000)
+	}
+	if(re>=4000){
+		fc=0.046*pow(re,-0.2);
 		type="Turbulent";
-
-
+	}
 	cout<<"ΔH = "<<dh<<endl;
 	cout<<"Flow rate (Q) = "<<Q<<endl;
 	cout<<"V = "<<vel<<endl;
@@ -37,8 +39,6 @@ int main()
 	cout<<"Re = "<<re<<endl;
 	cout<<"l = "<<l<<endl;
 	cout<<"Type = "<<type<<endl;
-
-
 	}
 	return 0;
 }
