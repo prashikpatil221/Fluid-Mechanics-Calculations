@@ -20,7 +20,7 @@ int main()
 
 			cin>>fr;
 			cin>>h1>>h2;
-			dh=abs(h2-h1);
+			dh=abs(h2-h1)/100;
 			velocity=((fr*pow(10,-3))/60)/area;
 			pd=9.81*1000*dh;
 
