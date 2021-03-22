@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	#ifndef ONLINE_JUDGE
+		freopen("input.txt","r",stdin);
+		freopen("output.txt","w",stdout);
+	#endif
+		int t;
+		cin>>t;
+		while(t--){
+	
+			int ro=1000;
+			float area=4.9*pow(10,-4);
+			float fr,velocity;
+			float h1,h2,dh;
+			int pd;
+
+			cin>>fr;
+			cin>>h1>>h2;
+			dh=abs(h2-h1);
+			velocity=((fr*pow(10,-3))/60)/area;
+			pd=9.81*1000*dh;
+
+
+			cout<<"Velocity = "<<velocity<<endl;
+			cout<<"pressure drop = "<<pd<<endl;
+
+		}
+	
+	
+	return 0;
+}
